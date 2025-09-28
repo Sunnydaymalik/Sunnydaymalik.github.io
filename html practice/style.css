@@ -1,0 +1,605 @@
+/* ============================================================
+   GLOBAL DESIGN TOKENS & BASE
+   Shared across all pages
+   ============================================================ */
+   :root{
+    --bg:#0b0b0c;
+    --panel:#0f0f11;
+    --muted:#bfc4c8;
+    --text:#ffffff;
+    --card:#000000;
+    --radius:12px;
+    --max-width:1100px;
+    --gap:1rem;
+    --glass: rgba(255,255,255,0.03);
+    /* Per-brand pages may override:
+       --accent
+       --brand-bg-image
+    */
+  }
+  
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, #070709, var(--bg));
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  
+  .container{max-width:var(--max-width); margin:0 auto; padding:1.25rem;}
+  a{color:inherit; text-decoration:none}
+  img{max-width:100%; height:auto; display:block;}
+  
+  /* ============================================================
+     SITE HEADER / NAV (Shared)
+     ============================================================ */
+  .site-header{
+    border-bottom:1px solid rgba(255,255,255,0.03);
+    padding:.75rem 0;
+    backdrop-filter: blur(6px);
+  }
+  .header-inner{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+  .brand-links{display:flex; gap:.5rem; flex-wrap:wrap}
+  .logo{font-weight:700; letter-spacing:1px; font-size:1.15rem}
+  
+  /* Nav pills */
+  .pill{
+    display:inline-block;
+    padding:.4rem .7rem;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,0.06);
+    background:transparent;
+    color:var(--muted);
+    font-weight:600;
+  }
+  .pill:hover{
+    transform:translateY(-2px);
+    color:var(--text);
+    border-color:rgba(255,255,255,0.12);
+  }
+  
+  /* Touch-friendly hover states for mobile */
+  @media (hover: none) and (pointer: coarse) {
+    .pill:hover {
+      transform: none;
+    }
+    .pill:active {
+      transform: scale(0.98);
+      background: rgba(255,255,255,0.05);
+    }
+  }
+  
+  /* ============================================================
+     HOME / HUB PAGE
+     (index.html)
+     ============================================================ */
+  
+  /* Resume / About block */
+  .resume-block {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-family: 'Inter', sans-serif;
+    color: #000000;
+
+  }
+  .resume-header { text-align: center; margin-bottom: 2rem; }
+  .resume-header h1 { font-size: 2.5rem; margin-bottom: .3rem; }
+  .resume-header .tagline {
+    font-size: 1.2rem;
+    color: #040404;
+    letter-spacing: .3px;
+  }
+  .resume-summary {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #000000;
+  }
+  .resume-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .resume-col h2 {
+    font-size: 1.3rem;
+    margin-bottom: .6rem;
+    color: #111;
+  }
+  .resume-col ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .resume-col li {
+    margin-bottom: .4rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  .resume-col li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: #888;
+  }
+  .resume-footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-style: italic;
+    color: #444;
+  }
+  
+  /* Brand cards grid on home - now using Foundation grid */
+  .grid{
+    margin-top:1.25rem
+  }
+  .card{
+    background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+    border:1px solid var(--glass);
+    padding:1rem;
+    border-radius:var(--radius);
+    min-height:140px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    transition:transform .18s, box-shadow .18s;
+  }
+  .card:hover{transform:translateY(-6px); box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+  
+  /* Touch-friendly card interactions */
+  @media (hover: none) and (pointer: coarse) {
+    .card:hover {
+      transform: none;
+    }
+    .card:active {
+      transform: scale(0.98);
+    }
+  }
+  .card h3{margin:.2rem 0 .6rem 0}
+  .card p{color:var(--muted); margin:0 0 .8rem 0; font-size:.95rem}
+  
+  /* ============================================================
+     BRAND PAGES
+     (supreme.html, stussy.html, crtz.html, stone.html, ald.html)
+     ============================================================ */
+  
+  .brand-hero{
+    margin:1.25rem 0;
+  }
+  .brand-main{
+    background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+    padding:1rem;
+    border-radius:12px;
+    border:1px solid var(--glass);
+  }
+  .brand-aside{
+    padding:1rem;
+    border-radius:12px;
+    border:1px solid var(--glass);
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+  }
+  
+  /* Logo block */
+  .logo-block{
+    display:flex; align-items:center; gap:1rem;
+  }
+  .logo-block .logo-img{
+    width:86px; height:86px; display:flex; align-items:center; justify-content:center;
+    border-radius:10px; background:rgba(255,255,255,0.02);
+    overflow:hidden; padding:.5rem;
+  }
+  
+  /* Timeline / milestones */
+  .timeline{margin-top:1rem}
+  .timeline ul{list-style:none; padding:0; margin:0; display:grid; gap:.6rem}
+  .timeline li{
+    background:var(--panel);
+    padding:.7rem;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.03);
+    color:var(--muted);
+    font-size:.95rem
+  }
+  
+  /* Lore section */
+  .lore{
+    margin-top:1rem;
+    padding:1rem;
+    border-radius:10px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)
+  }
+  
+  /* Utilities */
+  .kv{display:flex; gap:.5rem; align-items:center; color:var(--muted); font-size:.95rem}
+  .note-input{
+    width:100%;
+    padding:.5rem .75rem;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.06);
+    background:transparent;
+    color:var(--text)
+  }
+  
+  /* ============================================================
+     SITE FOOTER
+     ============================================================ */
+  .site-footer{
+    padding:1.25rem 0;
+    text-align:center;
+    color:var(--muted);
+    border-top:1px solid rgba(255,255,255,0.03);
+    margin-top:2rem
+  }
+  
+  /* ============================================================
+     PROJECTS PAGE
+     (projects.html)
+     ============================================================ */
+  
+  .project-card .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .project-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  
+  .project-details {
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+  
+  .project-details h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  
+  .project-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .project-details li {
+    margin-bottom: 0.4rem;
+    padding-left: 1rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text);
+  }
+  
+  .project-details li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent, #e50914);
+    font-weight: bold;
+  }
+  
+  .project-tech {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tech-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .lead {
+    font-size: 1.2rem;
+    color: var(--muted);
+    margin-bottom: 0;
+  }
+
+  /* ============================================================
+     BRAND DROPDOWN STYLING
+     ============================================================ */
+  
+  .brand-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text);
+    padding: 0;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: var(--text);
+    text-underline-offset: 4px;
+  }
+  
+  .brand-toggle-btn:hover {
+    text-decoration-color: var(--accent, #e50914);
+  }
+  
+  /* Touch-friendly brand toggle */
+  @media (hover: none) and (pointer: coarse) {
+    .brand-toggle-btn:hover {
+      text-decoration-color: var(--text);
+    }
+    .brand-toggle-btn:active {
+      text-decoration-color: var(--accent, #e50914);
+    }
+  }
+  
+  .dropdown-arrow {
+    font-size: 0.7rem;
+    margin-left: 0.3rem;
+    transition: transform 0.2s ease;
+    opacity: 0.6;
+  }
+  
+  .brand-toggle-btn[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  
+  .brand-dropdown {
+    background: var(--panel);
+    border: 1px solid var(--glass);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    padding: 1rem;
+    min-width: 180px;
+    z-index: 1000;
+  }
+  
+  
+  .brand-link {
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+  
+  .brand-link:hover {
+    color: var(--accent, #e50914);
+  }
+
+  /* ============================================================
+     RESPONSIVE DESIGN
+     Mobile-first approach preserving aesthetic
+     ============================================================ */
+  
+  /* Tablet and below */
+  @media (max-width: 980px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    .logo-img {
+      width: 72px; 
+      height: 72px;
+    }
+    
+    .header-inner {
+      flex-direction: column; 
+      align-items: flex-start; 
+      gap: 0.6rem;
+    }
+    
+    .brand-links {
+      width: 100%;
+      justify-content: flex-start;
+    }
+    
+    /* Make pills more touch-friendly */
+    .pill {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.95rem;
+    }
+    
+    /* Improve dropdown for mobile */
+    .brand-dropdown {
+      min-width: 200px;
+      padding: 1.2rem;
+    }
+    
+    .brand-link {
+      padding: 0.6rem 0;
+      font-size: 1rem;
+    }
+    
+    /* Resume block adjustments */
+    .resume-block {
+      margin: 2rem auto;
+      padding: 1.5rem;
+    }
+    
+    .resume-header h1 {
+      font-size: 2rem;
+    }
+    
+    .resume-sections {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Mobile phones */
+  @media (max-width: 640px) {
+    .container {
+      padding: 0.75rem;
+    }
+    
+    .site-header {
+      padding: 0.5rem 0;
+    }
+    
+    .logo {
+      font-size: 1rem;
+    }
+    
+    /* Stack navigation pills vertically on very small screens */
+    .brand-links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+    
+    .pill {
+      padding: 0.6rem 1rem;
+      width: auto;
+      min-width: 120px;
+    }
+    
+    /* Brand hero adjustments */
+    .brand-hero {
+      margin: 1rem 0;
+    }
+    
+    .brand-main,
+    .brand-aside {
+      padding: 0.8rem;
+    }
+    
+    .logo-block {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    
+    .logo-img {
+      width: 60px;
+      height: 60px;
+    }
+    
+    /* Timeline improvements */
+    .timeline li {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+    
+    /* Project cards */
+    .project-card .card {
+      padding: 0.8rem;
+    }
+    
+    .project-tech {
+      gap: 0.3rem;
+    }
+    
+    .tech-tag {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.4rem;
+    }
+    
+    /* Resume block mobile */
+    .resume-block {
+      margin: 1.5rem auto;
+      padding: 1rem;
+    }
+    
+    .resume-header h1 {
+      font-size: 1.8rem;
+    }
+    
+    .resume-header .tagline {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Very small screens */
+  @media (max-width: 480px) {
+    .container {
+      padding: 0.5rem;
+    }
+    
+    .logo {
+      font-size: 0.95rem;
+    }
+    
+    .pill {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.9rem;
+    }
+    
+    .brand-dropdown {
+      min-width: 160px;
+      padding: 1rem;
+    }
+    
+    .brand-link {
+      padding: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+    
+    .resume-header h1 {
+      font-size: 1.6rem;
+    }
+    
+    .resume-col h2 {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Additional mobile optimizations */
+  @media (max-width: 640px) {
+    /* Improve text readability */
+    body {
+      font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    /* Better spacing for brand pages */
+    .brand-main h1 {
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+    
+    .brand-main h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+    }
+    
+    /* Improve button accessibility */
+    .btn-accent {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      min-height: 44px; /* iOS recommended touch target */
+    }
+    
+    /* Better image handling */
+    .logo-img img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Improve dropdown positioning on mobile */
+    .brand-dropdown {
+      position: relative;
+      margin-top: 0.5rem;
+    }
+  }

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Stüssy — Brand Study</title>
+
+  <style>
+    /* page-level accent + small tweaks for Stüssy */
+    :root{
+      --accent: #111111; /* Stüssy: stark monochrome */
+    }
+    .btn-accent{background:var(--accent); color:white; padding:.5rem .75rem; border-radius:8px; font-weight:700;}
+    .badge{width:100%; max-width:240px; display:block; margin-top:.6rem;}
+    .brand-aside h4{color:var(--accent)}
+    /* subtle type/spacing tweaks for Stüssy aesthetic */
+    .brand-main h3 { letter-spacing: .6px; }
+    /* make sure any local logo sits nicely */
+    .logo-img img { max-width:100%; height:auto; display:block; }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../foundation-starter/css/foundation.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">Portfolio</a>
+      <nav class="brand-links" aria-label="Brands">
+        <a class="pill" href="../index.html">Home</a>
+        <a class="pill" href="../projects.html">Projects</a>
+        <div class="dropdown-pane brand-dropdown" id="brand-dropdown" data-dropdown data-close-on-click="false" data-v-offset="10">
+          <div class="dropdown-content">
+            <a class="brand-link" href="supreme.html">Supreme</a>
+            <a class="brand-link" href="crtz.html">Crtz</a>
+            <a class="brand-link" href="stone.html">Stone Island</a>
+            <a class="brand-link" href="stussy.html">Stüssy</a>
+          </div>
+        </div>
+        <button class="brand-toggle-btn" type="button" data-toggle="brand-dropdown" aria-expanded="false" aria-controls="brand-dropdown">
+          Brand Study
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container grid-container">
+    <section class="brand-hero grid-x grid-padding-x" aria-labelledby="stussy-title">
+      <div class="brand-main cell large-8">
+        <header class="logo-block">
+          <div class="logo-img">
+            <img src="../images/Stussy-logo.jpg" alt="Stüssy logo" style="max-width:100%; height:auto;">
+          </div>
+          <div>
+            <h1 id="stussy-title">Stüssy</h1>
+            <div class="kv">Founded: <strong>Early 1980s</strong> &nbsp;•&nbsp; Origin: <strong>Laguna Beach, California</strong></div>
+          </div>
+        </header>
+
+        <section aria-label="summary" style="margin-top:1rem">
+          <p>
+            Stüssy is an American streetwear and lifestyle brand founded by Shawn Stüssy in the early 1980s. What began as hand-signed surfboards evolved into one of the foundational labels in streetwear — bridging surf, skate, hip-hop and high-fashion circles.
+          </p>
+        </section>
+
+        <section class="lore" aria-label="history" style="margin-top:1rem">
+          <h3>History</h3>
+          <p>Shawn Stüssy shaped surfboards in Laguna Beach and wrote his surname on boards with a broad-tipped marker; that signature became the brand's logo when he began screen-printing T-shirts and apparel. The handwritten mark — inspired by family handwriting and graffiti vernacular — is instantly recognisable and helped the brand move from local surf shops to global retail.</p>
+
+          <div class="timeline" aria-label="timeline">
+            <h4>Timeline / Milestones</h4>
+            <ul>
+              <li><strong>Early 1980s:</strong> Shawn Stüssy begins marking shaped surfboards with his signature and creates early apparel runs.</li>
+              <li><strong>1984–1988:</strong> Distribution expands to international boutiques and specialty retailers.</li>
+              <li><strong>1990s–2000s:</strong> Stüssy embeds in skate and hip-hop culture and grows via collaborations.</li>
+              <li><strong>2010s–present:</strong> Ongoing collaborations and continued cultural relevance in both street and luxury contexts.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-top:1rem">
+          <h3>Identity</h3>
+          <p>By the mid-to-late 1980s Stüssy had expanded beyond California into international specialty shops and boutiques across the U.S., Europe and Japan. Its cross-cultural appeal allowed it to grow organically through subcultures rather than traditional fashion cycles. Across decades Stüssy has collaborated with major players (Nike, Converse, G-Shock and more) and with designers and labels that sit between streetwear and luxury.</p>
+        </section>
+      </div>
+
+     
+      <aside class="brand-aside cell large-4">
+        <h4>Visuals</h4>
+        <img src="../images/stussy.jpg" alt="Stüssy sample visual" class="alcatraz-badge" onerror="this.style.display='none'">
+
+
+        <h4 style="margin-top:1rem">Quick links</h4>
+        <div style="display:flex; gap:.5rem; flex-direction:column; margin-top:.4rem">
+          <a class="pill" href="https://www.stussy.com/" target="_blank" rel="noopener">Official site</a>
+          <a class="pill" href="https://www.instagram.com/stussy/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+
+        <div style="margin-top:1rem">
+          <a class="btn-accent button" href="../index.html">Back to hub</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container">
+      <p><code>STÜSSY</code>.</p>
+    </div>
+  </footer>
+
+  <!-- Foundation 6 JavaScript -->
+  <script src="../foundation-starter/js/vendor/jquery.js"></script>
+  <script src="../foundation-starter/js/vendor/what-input.js"></script>
+  <script src="../foundation-starter/js/vendor/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Stone Island — Brand Study</title>
+
+  <style>
+    :root{
+      --accent: #223322; /* deep military green */
+    }
+    .btn-accent { background: var(--accent); color:white; padding:.5rem .75rem; border-radius:8px; font-weight:700; }
+    .alcatraz-badge { width:100%; max-width:240px; display:block; margin-top:.6rem; border-radius:50%; }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../foundation-starter/css/foundation.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">Portfolio</a>
+      <nav class="brand-links">
+        <a class="pill" href="../index.html">Home</a>
+        <a class="pill" href="../projects.html">Projects</a>
+        <div class="dropdown-pane brand-dropdown" id="brand-dropdown" data-dropdown data-close-on-click="false" data-v-offset="10">
+          <div class="dropdown-content">
+            <a class="brand-link" href="supreme.html">Supreme</a>
+            <a class="brand-link" href="crtz.html">Crtz</a>
+            <a class="brand-link" href="stone.html">Stone Island</a>
+            <a class="brand-link" href="stussy.html">Stüssy</a>
+          </div>
+        </div>
+        <button class="brand-toggle-btn" type="button" data-toggle="brand-dropdown" aria-expanded="false" aria-controls="brand-dropdown">
+          Brand Study
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container grid-container">
+    <section class="brand-hero grid-x grid-padding-x" aria-labelledby="stone-title">
+      <div class="brand-main cell large-8">
+        <header class="logo-block">
+          <div class="logo-img">
+            <img src="../images/stone.jpg" alt="Stone Island logo" style="max-width:100%; height:auto;">
+          </div>
+          <div>
+            <h1 id="stone-title">Stone Island</h1>
+            <div class="kv">Founded: <strong>1982</strong> &nbsp;•&nbsp; Origin: <strong>Ravarino, Italy</strong></div>
+          </div>
+        </header>
+
+        <section aria-label="summary">
+          <p style="margin-top:1rem">
+            Stone Island is an Italian luxury men's apparel brand founded in 1982 by Massimo Osti. Known for its compass patch logo and fabric innovation, the label became a cult favorite among European football subcultures and later global streetwear.
+          </p>
+        </section>
+
+        <section class="lore" aria-label="history">
+          <h3>History</h3>
+          <p>Founded by designer Massimo Osti as a diffusion line of C.P. Company. Its hallmark was garment-dyed fabrics and military inspiration. The brand's famous compass patch, usually buttoned to the left arm, symbolizes exploration and function.</p>
+
+          <div class="timeline" aria-label="timeline">
+            <h4>Timeline / Milestones</h4>
+            <ul>
+              <li><strong>1982:</strong> Founded by designer Massimo Osti as a diffusion line of C.P. Company. Its hallmark was garment-dyed fabrics and military inspiration.</li>
+              <li><strong>1993:</strong> Carlo Rivetti and the Sportswear Company acquired the brand, expanding its global profile.</li>
+              <li><strong>2000s:</strong> Stone Island became tied to UK football casuals, grime music culture, and global streetwear icons.</li>
+              <li><strong>2017:</strong> 30% stake acquired by investment firm Carlyle Group, boosting expansion.</li>
+              <li><strong>2020:</strong> Moncler S.p.A. purchased Stone Island for €1.15 billion, integrating into its luxury group.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-top:1rem">
+          <h3>Identity</h3>
+          <p>Stone Island is recognized for dye experiments, reflective materials, and heat-sensitive textiles. Its aesthetic fuses military and utilitarian design with Italian tailoring precision.</p>
+        </section>
+      </div>
+
+
+      <aside class="brand-aside cell large-4">
+        <h4>Visuals</h4>
+        <img src="../images/Mike.jpg" alt="Stone Island visual" onerror="this.style.display='none'">
+
+
+        <h4 style="margin-top:1rem">Quick links</h4>
+        <div style="display:flex; gap:.5rem; flex-direction:column; margin-top:.4rem">
+          <a class="pill" href="https://www.stoneisland.com/" target="_blank" rel="noopener">Official site</a>
+          <a class="pill" href="https://www.instagram.com/stoneisland/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+
+        <div style="margin-top:1rem">
+          <a class="btn-accent button" href="../index.html">Back to hub</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><code>STONE ISLAND</code>.</p>
+    </div>
+  </footer>
+
+  <!-- Foundation 6 JavaScript -->
+  <script src="../foundation-starter/js/vendor/jquery.js"></script>
+  <script src="../foundation-starter/js/vendor/what-input.js"></script>
+  <script src="../foundation-starter/js/vendor/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>

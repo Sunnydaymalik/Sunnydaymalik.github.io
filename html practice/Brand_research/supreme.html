@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Supreme — Brand Study</title>
+
+  <!-- page-specific brand accent -->
+  <style>
+    :root{
+      --accent: #e50914; /* Supreme red */
+    }
+    /* small override for this page */
+    .brand-aside .logo-img{border:2px solid rgba(255,255,255,0.04)}
+    .brand-aside h4{color:var(--accent)}
+    .btn-accent{background:var(--accent); color:white; padding:.5rem .75rem; border-radius:8px; display:inline-block; font-weight:700}
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../foundation-starter/css/foundation.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">Portfolio</a>
+      <nav class="brand-links" aria-label="Brands">
+        <a class="pill" href="../index.html">Home</a>
+        <a class="pill" href="../projects.html">Projects</a>
+        <div class="dropdown-pane brand-dropdown" id="brand-dropdown" data-dropdown data-close-on-click="false" data-v-offset="10">
+          <div class="dropdown-content">
+            <a class="brand-link" href="supreme.html">Supreme</a>
+            <a class="brand-link" href="crtz.html">Crtz</a>
+            <a class="brand-link" href="stone.html">Stone Island</a>
+            <a class="brand-link" href="stussy.html">Stüssy</a>
+          </div>
+        </div>
+        <button class="brand-toggle-btn" type="button" data-toggle="brand-dropdown" aria-expanded="false" aria-controls="brand-dropdown">
+          Brand Study
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container grid-container">
+    <section class="brand-hero grid-x grid-padding-x" aria-labelledby="sup-title">
+      <div class="brand-main cell large-8">
+        <header class="logo-block">
+          <div class="logo-img">
+            <!-- link to logo externally or use a local version -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Supreme_Logo.svg" alt="Supreme logo">
+          </div>
+          <div>
+            <h1 id="sup-title">Supreme</h1>
+            <div class="kv">Founded: <strong>1994</strong> &nbsp;•&nbsp; Origin: <strong>Manhattan, NYC</strong></div>
+          </div>
+        </header>
+
+        <section aria-label="summary">
+          <p style="margin-top:1rem">
+            Supreme is an American clothing brand established in Manhattan, New York in April 1994. The company focuses on streetwear, skateboarding, and hip hop fashion trends. In December 2020, VF Corporation bought Supreme for $2.1 billion. In July 2024, Supreme was sold to EssilorLuxottica for $1.5 billion.
+          </p>
+        </section>
+
+        <section class="lore" aria-label="history">
+          <h3>History (condensed)</h3>
+          <p>Founded by James Jebbia in 1994, Supreme’s red box logo draws inspiration from Barbara Kruger’s artwork. The Lafayette Street store in Manhattan was designed to accommodate skate culture and employ skaters — helping the brand earn credibility early on. Over the next two decades Supreme added locations (Los Angeles, London, Paris, Tokyo, etc.), high-visibility collaborations and legal battles over its box-logo.</p>
+
+          <div class="timeline" aria-label="timeline">
+            <h4>Timeline / Milestones</h4>
+            <ul>
+              <li><strong>1994:</strong> Lafayette St store opens (NYC).</li>
+              <li><strong>2004:</strong> LA store on North Fairfax opens.</li>
+              <li><strong>2011–2016:</strong> London (2011), Paris (2016), several Tokyo locations.</li>
+              <li><strong>2017:</strong> ~50% stake sold to The Carlyle Group.</li>
+              <li><strong>2020:</strong> VF Corporation acquisition.</li>
+              <li><strong>2024:</strong> Sale to EssilorLuxottica.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-top:1rem">
+          <h3>Brand lore & practice</h3>
+          <p>Limited drops, artist remixes (both licensed and unlicensed), celebrity visibility, and the “scarcity + hype” model are central to the Supreme story. The red box logo became a cultural symbol beyond clothing — one of streetwear’s most recognized marks.</p>
+        </section>
+      </div>
+
+      <aside class="brand-aside cell large-4">
+        <h4>Visuals</h4>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/2/28/Supreme_Logo.svg" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Supreme_Logo.svg" alt="Supreme logo" style="border-radius:8px; margin-top:.5rem">
+        </a>
+
+        <h4 style="margin-top:1rem">Featured image</h4>
+        <!-- local image: put Purpleswag.jpg in same folder or images/ -->
+        <img src="../images/Purpleswag.jpg" alt="Purple Supreme sample" style="border-radius:8px; margin-top:.5rem">
+        <h4 style="margin-top:1rem">Quick links</h4>
+        <div style="display:flex; gap:.5rem; flex-direction:column; margin-top:.4rem">
+          <a class="pill" href="https://www.corteiz.com/" target="_blank" rel="noopener">Official site</a>
+          <a class="pill" href="https://www.instagram.com/corteiz/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div style="margin-top:1rem">
+          <a class="btn-accent button" href="../index.html">Back to hub</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><code>SUPREME</code>.</p>
+    </div>
+  </footer>
+
+  <!-- Foundation 6 JavaScript -->
+  <script src="../foundation-starter/js/vendor/jquery.js"></script>
+  <script src="../foundation-starter/js/vendor/what-input.js"></script>
+  <script src="../foundation-starter/js/vendor/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>

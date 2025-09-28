@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Corteiz (CRTZ) — Brand Study</title>
+
+  <!-- page-level brand accent -->
+  <style>
+    :root{
+      --accent: #0b6b5a; /* deep green/teal — adjust to taste */
+      --brand-name: "Corteiz";
+    }
+
+    /* small page overrides */
+    .brand-aside h4 { color: var(--accent); }
+    .btn-accent { background: var(--accent); color: white; padding: .5rem .75rem; border-radius: 8px; display:inline-block; font-weight:700; }
+    .logo-img { background: rgba(0,0,0,0.04); display:flex; align-items:center; justify-content:center; }
+    .alcatraz-badge { width:100%; max-width:220px; height:auto; display:block; border-radius:8px; margin-top:.6rem; }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../foundation-starter/css/foundation.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">Portfolio</a>
+      <nav class="brand-links" aria-label="Brands">
+        <a class="pill" href="../index.html">Home</a>
+        <a class="pill" href="../projects.html">Projects</a>
+        <div class="dropdown-pane brand-dropdown" id="brand-dropdown" data-dropdown data-close-on-click="false" data-v-offset="10">
+          <div class="dropdown-content">
+            <a class="brand-link" href="supreme.html">Supreme</a>
+            <a class="brand-link" href="crtz.html">Crtz</a>
+            <a class="brand-link" href="stone.html">Stone Island</a>
+            <a class="brand-link" href="stussy.html">Stüssy</a>
+          </div>
+        </div>
+        <button class="brand-toggle-btn" type="button" data-toggle="brand-dropdown" aria-expanded="false" aria-controls="brand-dropdown">
+          Brand Study
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container grid-container">
+    <section class="brand-hero grid-x grid-padding-x" aria-labelledby="crtz-title">
+      <div class="brand-main cell large-8">
+        <header class="logo-block">
+          <div class="logo-img">
+            <img src="../images/crtz.jpg" alt="Corteiz Alcatraz logo" style="max-width:100%; height:auto;">
+          </div>
+          <div>
+            <h1 id="crtz-title">Corteiz <small style="font-size:.7rem; color:var(--muted); margin-left:.5rem">CRTZ — Rules The World</small></h1>
+            <div class="kv">Founded: <strong>2017</strong> &nbsp;•&nbsp; Origin: <strong>London, UK</strong></div>
+          </div>
+        </header>
+
+        <section aria-label="summary" style="margin-top:1rem">
+          <p>
+            Corteiz (commonly abbreviated CRTZ) is a London-based streetwear brand founded in 2017 by British-Nigerian entrepreneur and creative director Clint Ogbenna (also known as “Clint 419”). The label is known for its Alcatraz-inspired logo and strong, community-driven, guerrilla-style marketing that has built a cult following in the U.K. and beyond.
+          </p>
+        </section>
+
+        <section class="lore" aria-label="history" style="margin-top:1rem">
+          <h3>Origin & ethos</h3>
+          <p>
+            Starting with limited screen-printed tees and crewnecks, Corteiz cultivated an anti-establishment identity: the Alcatraz motif (a reference to the famous prison island) is used as a symbol of rebellion and outsider culture. The brand operates with scarcity-first drops, selective distribution, and a password-protected website approach that amplifies hype and community participation.
+          </p>
+
+          <h3 style="margin-top:.8rem">Milestones & notable actions</h3>
+          <div class="timeline">
+            <ul>
+              <li><strong>2017:</strong> Corteiz founded in London; initial releases were limited t-shirts and hoodies.</li>
+
+              <li><strong>2021:</strong> The brand executed guerrilla drops in Soho and other locations, using off-beat activations to amplify scarcity and buzz.</li>
+
+              <li><strong>2022:</strong> "Da Great Bolo Exchange" and the "99p Market Stall" — two headline stunts where Corteiz exchanged high-end outerwear or sold cargos for 99 pence, driving viral attention and large turnouts. (Collected items were donated in some cases.)</li>
+
+              <li><strong>2023:</strong> Corteiz launched collaborations including a high-profile Nike Air Max 95 drop and other coop work that brought the brand into international sneaker/streetwear conversations. </li>
+
+              <li><strong>2023–2024:</strong> The brand expanded its presence with pop-ups and exchange events beyond London — including a notable denim exchange in New York — furthering its reputation for experiential marketing.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-top:1rem">
+          <h3>Practice & community</h3>
+          <p>
+            Rather than traditional PR and broad wholesale distribution, Corteiz relies on tight community curation — limited runs, surprise activations, and social media engagements orchestrated by the founder. This strategy turned the brand into a cultural touchstone for UK youth, endorsed organically by musicians and influencers.
+          </p>
+        </section>
+      </div>
+
+      <aside class="brand-aside cell large-4">
+        <h4>Visuals</h4>
+        <img src="../images/crtzrtw.jpg" alt="Corteiz sample visual" class="alcatraz-badge" onerror="this.style.display='none'">
+
+
+        <h4 style="margin-top:1rem">Quick links</h4>
+        <div style="display:flex; gap:.5rem; flex-direction:column; margin-top:.4rem">
+          <a class="pill" href="https://www.corteiz.com/" target="_blank" rel="noopener">Official site</a>
+          <a class="pill" href="https://www.instagram.com/corteiz/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+
+        <div style="margin-top:1rem">
+          <a class="btn-accent button" href="../index.html">Back to hub</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><code>CRTZ-WTW</code>.</p>
+    </div>
+  </footer>
+
+  <!-- Foundation 6 JavaScript -->
+  <script src="../foundation-starter/js/vendor/jquery.js"></script>
+  <script src="../foundation-starter/js/vendor/what-input.js"></script>
+  <script src="../foundation-starter/js/vendor/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
